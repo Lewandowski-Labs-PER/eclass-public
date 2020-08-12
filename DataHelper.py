@@ -49,6 +49,12 @@ class eclass_data:
         (4006, 111)
         """
         return self.post[self.post.ResponseId.isin(self.buffy_id)]
+    
+    def get_cis_intro(self):
+        return self.cis[self.cis.ResponseId.isin(self.first_year_id)]
+    
+    def get_cis_buffy(self):
+        return self.cis[self.cis.ResponseId.isin(self.buffy_id)]
 
 
 if __name__ == "__main__":
