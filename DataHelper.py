@@ -32,6 +32,11 @@ class eclass_data:
         """
         return self.post[self.post.ResponseId.isin(self.first_year_id)]
     
+    def get_intro_matched(self):
+        pre = self.pre[self.pre.ResponseId.isin(self.first_year_id)]
+        post = self.post[self.post.ResponseId.isin(self.first_year_id)]
+        return pre.merge(post, on=['anon_student_id', 'ResponseId'], suffixes=['_pre', '_post'])
+    
     def get_buffy_pre(self):
         """
         Returns pre-survey results for buffy students
@@ -49,6 +54,11 @@ class eclass_data:
         (4006, 111)
         """
         return self.post[self.post.ResponseId.isin(self.buffy_id)]
+    
+    def get_buffy_matched(self):
+        pre = self.pre[self.pre.ResponseId.isin(self.buffy_id)]
+        post = self.post[self.post.ResponseId.isin(self.buffy_id)]
+        return pre.merge(post, on=['anon_student_id', 'ResponseId'], suffixes=['_pre', '_post'])
     
     def get_cis_intro(self):
         return self.cis[self.cis.ResponseId.isin(self.first_year_id)]
