@@ -8,10 +8,10 @@ class eclass_data:
 
     """
     
-    def __init__(self):
-        self.pre = pd.read_csv('anon_pre.csv')
-        self.post = pd.read_csv('anon_post.csv')
-        self.cis = pd.read_csv('anon_cis.csv')
+    def __init__(self, route=''):
+        self.pre = pd.read_csv(route + 'anon_pre.csv')
+        self.post = pd.read_csv(route +'anon_post.csv')
+        self.cis = pd.read_csv(route +'anon_cis.csv')
         self.first_year_id = self.cis[self.cis.Q18=='First year (introductory) lab'].ResponseId
         self.buffy_id = self.cis[self.cis.Q18=='Beyond the first year lab'].ResponseId
         
