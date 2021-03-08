@@ -6,3 +6,6 @@ Note: pre-test and post-test scores have been reduced from a 5-point Likert scal
 (see: Zwickl 2014 - Epistemology and expectations survey about experimental physics - Development and initial results)
 to a 3-point Likert scale (1, 3, 5) = (disagree, neutral, agree) with the expert-like view --- this has taken account of whether the expert-like view was disagree with the statement given to students.
 Therefore, to calculate a student's E-CLASS score from the data in the anon tables here one simply needs to convert the (1, 3, 5) scale to a (-1, 0, 1) scale and sum over their score.
+
+
+This data set can only be used for research purposes. Commercial use of this data is strictly not allowed.
