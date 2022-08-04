@@ -165,7 +165,7 @@ class eclass_data:
         """
         intro = self.get_intro_matched(unique_students=unique_students)
         bfy = self.get_buffy_matched(unique_students=unique_students)
-        return pd.concat([intro, buffy])
+        return pd.concat([intro, bfy])
     
     def get_cis_intro(self):
         """
